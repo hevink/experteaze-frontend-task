@@ -1,74 +1,8 @@
-# **Experteaze - Frontend Developer Technical Assessment**
-
-## **Objective**
-
-This assessment evaluates your ability to build a visually appealing, functional, and responsive frontend for the **Experteaze** platform using **Next.js**, **MobX for state management**, and **MUI Components** along with custom styling.
-
-Try your best to stick with MUI Components and avoid using HTML Elements unless there is no other way.
-
----
-
-## **Task Description**
-
-You are tasked with building a **Home Services Search and Comparison Page** for Experteaze. The page should allow users to search for home services offered by freelancers and compare their prices and details.
-
----
-
-### **Functional Requirements**
-
-1. **Homepage Layout**
-   - Design a landing page with:
-     - A header containing a logo placeholder, navigation links, and a "Login" button.
-     - A search bar prominently displayed in a hero section.
-     - A placeholder hero image/banner, same as what's on the current experteaze.ca landing page.
-2. **Search Functionality**
-   - Implement a search bar where users can type the type of service they’re looking for (e.g., "Yard Work," "Painting").
-   - Dynamically display a list of services matching the search query.
-3. **Service Cards**
-   - Display search results as styled cards, each containing:
-     - Service Name
-     - Freelancer Name
-     - Price (e.g., "$50/hour")
-     - Ratings
-     - A "Compare" button.
-4. **Comparison Table**
-   - Allow users to select up to **3 services** for comparison using the "Compare" button on each card.
-   - Display a comparison table at the bottom of the page that shows:
-     - Freelancer Names
-     - Prices
-     - Ratings (hardcoded dummy data).
-
----
-
-### **Technical Requirements**
-
-1. **State Management**
-   - Use **MobX** to manage:
-     - Search results.
-     - Selected services for comparison.
-2. **Styling**
-   - Use **MUI Styling** for component-specific styling.
-   - Ensure the design is fully responsive across mobile and desktop views.
-3. **Componentization**
-   - Break the page into reusable components:
-     - `Header`
-     - `SearchBar`
-     - `ServiceCard`
-     - `ComparisonTable`
-     - etc.
-4. **API Simulation**
-   - Use a mock data file (e.g., `services.json`) to simulate API responses for the search functionality.
-5. **Additional Features (Optional)**
-   - Add a sorting filter for services by price or rating.
-   - Implement a theme toggle (light/dark) using **MUI's ThemeProvider**.
-
----
-
 ## **Instructions to Run the Application**
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/experteaze-interview/frontend-assessment.git
+   git clone https://github.com/hevink/experteaze-frontend-task.git
    cd experteaze-frontend-assessment
    ```
 2. Install dependencies:
@@ -83,28 +17,26 @@ You are tasked with building a **Home Services Search and Comparison Page** for 
 
 ---
 
-## **Evaluation Criteria**
+## **Project Structure**
 
-1. **Code Quality**
-   - Code should be well-organized, modular, and maintainable.
-2. **Feature Completion**
-   - Ensure all required functionality is implemented.
-3. **User Experience**
-   - The design should be polished, intuitive, and responsive.
-4. **State Management**
-   - Proper usage of **MobX** to handle the state effectively.
+- **`components/`**: Contains all the React components.
+- **`pages/`**: Contains all the Next.js pages.
+- **`public/`**: Contains all the static files.
 
----
 
-## **Submission Details**
+## **Technologies Used**
 
-1. Push your code to this **GitHub repository** with the following branch name structure **YourFullName/experteaze-assessment**.
-2. Include a `Pull Request` description with:
-   - A brief description of your approach and solution.
-3. Submit the repository link within the given time frame, a maximum of 5 hours.
+- **Next.js**: A React framework for building server-side rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for styling web applications.
+- **Mui** : A library for Material UI components.
 
----
+## **Features**
 
-## **Good Luck!**
+- **Responsive Design**: The application is fully responsive and works on all screen sizes.
+- **Search**: The application supports searching for a specific user by their name.
+- **Sorting**: The application supports sorting the users by their name, email, and phone number.
+- **Mui Components**: The application uses Material UI components for a better user experience.
 
-We look forward to seeing your creativity and technical expertise in action.
+## **Recommendations**
+
+For this project, I recommend using the Next.js App Router instead of the Pages Router, as it’s more scalable, aligns with the latest advancements in Next.js, and offers better support for server components. Additionally, use TypeScript to enhance type safety and developer productivity. For the design system, consider replacing MUI with shadcn, as it provides a more modern and flexible approach to styling. Lastly, opt for Zustand over MobX for state management, as it’s lightweight, simpler to use, and works seamlessly with TypeScript
